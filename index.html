@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | DAW</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio">
+        <h1>Soy <span class="highlight">Scarlett</span></h1>
+        <p>Desarrolladora Web | DAW</p>
+    </header>
+
+    <section id="sobre-mi" class="hidden">
+        <h2>Sobre mí</h2>
+        <p>
+            Soy una estudiante de Desarrollo de Aplicaciones Web en Barcelona.
+            Me interesa el desarrollo frontend y pero me gusta aprender sobre backend también.
+            En mi tiempo libre, disfruto creando pequeños proyectos personales y explorando nuevas tecnologías web.
+        </p>
+    </section>
+
+    <section id="proyectos" class="hidden">
+        <h2>Proyectos</h2>
+
+        <div class="filtros">
+            <button data-filter="all">Todos</button>
+            <button data-filter="frontend">Frontend</button>
+            <button data-filter="react">React</button>
+            <button data-filter="backend">Backend</button>
+        </div>
+
+        <div class="grid-proyectos">
+            <div class="proyecto" data-category="frontend">
+                <h3>Landing Page</h3>
+                <p>HTML, CSS, JS</p>
+            </div>
+
+            <div class="proyecto" data-category="react">
+                <h3>Gestor de tareas</h3>
+                <p>React</p>
+            </div>
+
+            <div class="proyecto" data-category="backend">
+                <h3>App usuarios</h3>
+                <p>Node + MySQL</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="hidden">
+        <h2>Contacto</h2>
+        <p>Email: sctoala@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/ScarlettToala" target="_blank">ScarlettToala</a></p>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
