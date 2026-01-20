@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículum — ScarlettToala</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section-cv">
+            
+                <h1 class="cv-title">Mi Currículum</h1>
+                <p class="cv-subtitle">Descárgalo o visualízalo directamente en la web</p>
+
+                <div class="cv-actions" role="toolbar" aria-label="Acciones del currículum">
+                    <!-- Abrir en nueva pestaña -->
+                    <a href="/img/CV.pdf" id="verCurriculum" class="btn btn-primary" target="_blank"
+                        rel="noopener noreferrer" aria-label="Ver currículum en nueva pestaña">
+                        👁 Ver CV
+                    </a>
+
+                    <!-- Forzar descarga -->
+                    <a href="/img/CV.pdf" id="descargarCurriculum" class="btn btn-secondary"
+                        download="CV_ScarlettToala.pdf" aria-label="Descargar currículum">
+                        ⤓ Descargar CV
+                    </a>
+                </div>
+
+            <div class="cv-container" aria-live="polite">
+                <div class="cv-card">
+                    <iframe src="/img/CV.pdf" title="Currículum de ScarlettToala" class="cv-iframe" loading="lazy">
+                        <!-- Fallback -->
+                        <p>Tu navegador no soporta iframes. Puedes descargarlo
+                            <a href="/img/CV.pdf">aquí</a>.
+                        </p>
+                    </iframe>
+                </div>
+                <p class="cv-note">Si el PDF no se muestra en móvil, usa el botón "Descargar CV" o ábrelo en el
+                    navegador.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

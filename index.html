@@ -6,6 +6,7 @@
     <title>Portfolio | DAW</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -16,22 +17,39 @@
             <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#curriculum">Currículum</a></li>
         </ul>
     </nav>
 
     <header id="inicio">
-        <h1>Soy <span class="highlight">Scarlett</span></h1>
+        <img src="img/FotoScarlett.jpg" alt="Foto de Scarlett Toala" class="foto-perfil">
+
+        <h1>Soy <span class="highlight">Scarlett Toala</span></h1>
         <p>Desarrolladora Web | DAW</p>
     </header>
 
     <section id="sobre-mi" class="hidden">
         <h2>Sobre mí</h2>
         <p>
-            Soy una estudiante de Desarrollo de Aplicaciones Web en Barcelona.
-            Me interesa el desarrollo frontend y pero me gusta aprender sobre backend también.
-            En mi tiempo libre, disfruto creando pequeños proyectos personales y explorando nuevas tecnologías web.
+            Soy estudiante de Desarrollo de Aplicaciones Web en Barcelona.
+            Me interesa especialmente el desarrollo frontend, aunque mi objetivo es convertirme en desarrolladora full
+            stack.
+            En mis proyectos personales disfruto creando pequeñas aplicaciones y explorando nuevas tecnologías web.
         </p>
     </section>
+
+    <section id="skills">
+        <h2>Stack tecnológico</h2>
+        <ul class="skills">
+            <li>HTML5 · CSS3 · JavaScript</li>
+            <li>React (básico / en aprendizaje)</li>
+            <li>Node.js · Express</li>
+            <li>MySQL</li>
+            <li>Git · GitHub</li>
+            <li>Figma (básico)</li>
+        </ul>
+    </section>
+
 
     <section id="proyectos" class="hidden">
         <h2>Proyectos</h2>
@@ -45,8 +63,16 @@
 
         <div class="grid-proyectos">
             <div class="proyecto" data-category="frontend">
-                <h3>Landing Page</h3>
+                <h3>Kantina</h3>
                 <p>HTML, CSS, JS</p>
+            </div>
+            <div class="proyecto" data-category="frontend">
+                <h3>Kantina</h3>
+                <p>
+                    Es uan pagina de ventas realizado con php y su propia API.
+                    Uso el framwork de Laravel, animaciones CSS y JavaScript para interacción.
+                </p>
+            <a href="#">Ver demo</a> | <a href="#">GitHub</a>
             </div>
 
             <div class="proyecto" data-category="react">
@@ -63,11 +89,56 @@
 
     <section id="contacto" class="hidden">
         <h2>Contacto</h2>
-        <p>Email: sctoala@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/ScarlettToala" target="_blank">ScarlettToala</a></p>
+
+        <a href="mailto:sctoala@gmail.com" class="btn">
+            <img src="img/icono-correo.png" alt="Dirección de correo" />
+            Email: sctoala@gmail.com
+        </a>
+        <a href="https://github.com/ScarlettToala" class="btn" target="_blank">
+            <img src="img/icono-github.png" alt="GitHub" />
+            GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/scarletttoala/" class="btn" target="_blank">
+            <img src="img/icono-linkedin.png" alt="LinkedIn">
+            LinkedIn
+        </a>
     </section>
 
-    <script src="js/main.js"></script>
+    <section class="section-cv" id="curriculum">
+
+        <h1 class="cv-title">Mi Currículum</h1>
+        <p class="cv-subtitle">Descárgalo o visualízalo directamente en la web</p>
+
+        <div class="cv-actions" role="toolbar" aria-label="Acciones del currículum">
+            <!-- Abrir en nueva pestaña -->
+            <a href="/img/CV.pdf" id="verCurriculum" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+                aria-label="Ver currículum en nueva pestaña">
+                👁 Ver CV
+            </a>
+
+            <!-- Forzar descarga -->
+            <a href="/img/CV.pdf" id="descargarCurriculum" class="btn btn-secondary" download="CV_ScarlettToala.pdf"
+                aria-label="Descargar currículum">
+                ⤓ Descargar CV
+            </a>
+        </div>
+
+
+        <div class="cv-container" aria-live="polite">
+            <div class="cv-card">
+                <iframe src="/img/CV.pdf" title="Currículum de ScarlettToala" class="cv-iframe" loading="lazy">
+                    <!-- Fallback -->
+                    <p>Tu navegador no soporta iframes. Puedes descargarlo
+                        <a href="/img/CV.pdf">aquí</a>.
+                    </p>
+                </iframe>
+            </div>
+            <p class="cv-note">Si el PDF no se muestra en móvil, usa el botón "Descargar CV" o ábrelo en el
+                navegador.</p>
+        </div>
+    </section>
+
 </body>
 
 </html>
