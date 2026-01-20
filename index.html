@@ -40,14 +40,39 @@
 
     <section id="skills">
         <h2>Stack tecnológico</h2>
-        <ul class="skills">
-            <li>HTML5 · CSS3 · JavaScript</li>
-            <li>React (básico / en aprendizaje)</li>
-            <li>Node.js · Express</li>
-            <li>MySQL</li>
-            <li>Git · GitHub</li>
-            <li>Figma (básico)</li>
-        </ul>
+        <div class="skills">
+            <picture>
+                <!--source srcset="img/html-5.avif" type="image/avif"-->
+                <img src="img/html-5.png" class="icon">
+            </picture>
+            <picture>
+                <img src="img/css.png" class="icon">
+            </picture>
+            <picture>
+                <img src="img/JS.webp" class="icon">
+            </picture>
+            <picture>
+                <img src="img/react.webp" class="icon">
+            </picture>
+            <picture>
+                <img src="img/vue.webp" class="icon">
+            </picture>
+            <picture>
+                <img src="img/node.png" class="icon">
+            </picture>
+            <picture>
+                <img src="img/postgreSQL.webp" class="icon">
+            </picture>
+            <picture>
+                <img src="img/icono-github.png" class="icon">
+            </picture>
+            <picture>
+                <img src="img/Figma.png" class="icon">
+            </picture>
+            <picture>
+                <img src="img/php.png" class="icon">
+            </picture>
+        </div>
     </section>
 
 
@@ -57,33 +82,97 @@
         <div class="filtros">
             <button data-filter="all">Todos</button>
             <button data-filter="frontend">Frontend</button>
-            <button data-filter="react">React</button>
             <button data-filter="backend">Backend</button>
         </div>
 
         <div class="grid-proyectos">
-            <div class="proyecto" data-category="frontend">
-                <h3>Kantina</h3>
-                <p>HTML, CSS, JS</p>
-            </div>
-            <div class="proyecto" data-category="frontend">
-                <h3>Kantina</h3>
-                <p>
-                    Es uan pagina de ventas realizado con php y su propia API.
-                    Uso el framwork de Laravel, animaciones CSS y JavaScript para interacción.
-                </p>
-            <a href="#">Ver demo</a> | <a href="#">GitHub</a>
-            </div>
-
-            <div class="proyecto" data-category="react">
-                <h3>Gestor de tareas</h3>
-                <p>React</p>
-            </div>
-
             <div class="proyecto" data-category="backend">
-                <h3>App usuarios</h3>
-                <p>Node + MySQL</p>
+                <h3 class="proyecto-titulo">Kantina</h3>
+
+                <p class="proyecto-stack">
+                    HTML · CSS · JS · PHP · MySQL · Laravel
+                </p>
+
+                <p class="proyecto-desc">
+                    Página de ventas desarrollada con PHP y su propia API.
+                    Utiliza el framework Laravel, animaciones CSS y JavaScript
+                    para mejorar la experiencia de usuario.
+                </p>
+
+                <div class="proyecto-links">
+                    <a href="https://github.com/ScarlettToala/Proyecto-APICRUDLaravel.git"
+                        class="proyecto-btn secondary">GitHub</a>
+                </div>
             </div>
+
+            <div class="proyecto" data-category="frontend">
+                <h3 class="proyecto-titulo">Gestor de Tareas</h3>
+
+                <p class="proyecto-stack">
+                    VUE · HTML · JS
+                </p>
+
+                <p class="proyecto-desc">
+                    Es una pequeña aplicación que permite gestionar un listado de tareas.
+                </p>
+
+                <div class="proyecto-links">
+                    <a href="https://github.com/ScarlettToala/VUE_todo_list/tree/main"
+                        class="proyecto-btn secondary">GitHub</a>
+                </div>
+            </div>
+
+            <div class="proyecto" data-category="frontend">
+                <h3 class="proyecto-titulo">Hundir la flota</h3>
+
+                <p class="proyecto-stack">
+                    HTML · CSS · JS · Node
+                </p>
+
+                <p class="proyecto-desc">
+                    Este es un juego clásico de Hundir la flota desarrollado con JavaScript y Node.js.
+                    Permite a un jugador contra la IA enfrentarse en tiempo real.
+                </p>
+
+                <div class="proyecto-links">
+                    <a href="https://github.com/ScarlettToala/Hundir-La-Flota-2.0.git"
+                        class="proyecto-btn secondary">GitHub</a>
+                </div>
+            </div>
+
+            <div class="proyecto" data-category="frontend">
+                <h3 class="proyecto-titulo">Silpaza</h3>
+
+                <p class="proyecto-stack">
+                    HTML · TailwindCSS · JS · Node · REACT
+                </p>
+
+                <p class="proyecto-desc">
+                    Este es mi proyecto favorito. Una tienda online llamada Silpaza. Inspirado en un proyecto personal.
+                </p>
+
+                <div class="proyecto-links">
+                    <a href="https://github.com/ScarlettToala/Hundir-La-Flota-2.0.git"
+                        class="proyecto-btn secondary">GitHub</a>
+                </div>
+            </div>
+            <div class="proyecto" data-category="backend">
+                <h3 class="proyecto-titulo">Adivina la bandera</h3>
+
+                <p class="proyecto-stack">
+                    HTML · CSS · PHP · API
+                </p>
+
+                <p class="proyecto-desc">
+                    Es un mini juego de banderas en la cuál se visualizan fotos de banderas.
+                </p>
+
+                <div class="proyecto-links">
+                    <a href="https://github.com/ScarlettToala/Adivina-La-Bandera-Con-PHP.git"
+                        class="proyecto-btn secondary">GitHub</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
