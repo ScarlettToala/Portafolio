@@ -222,6 +222,11 @@ section h2 {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+#contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #contacto h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
@@ -230,6 +235,7 @@ section h2 {
 #contacto .btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 
     width: min(300px, 100%);
