@@ -24,13 +24,16 @@ body {
     background: #844394;
     color: #e5e7eb;
 }
-h2{
+
+h2 {
     text-align: center;
     margin-bottom: 4px;
 }
+
 nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background: rgb(255, 236, 96);
     padding: 0.8rem 1rem;
@@ -58,14 +61,22 @@ nav a:hover {
     color: rgb(153, 48, 214);
 }
 
+
 header {
-    min-height: calc(90vh - 80px);
-    padding-top: 80px;
+    min-height: 90vh;
+    padding-top: 100px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 
 .foto-perfil {
     width: 150px;
@@ -392,7 +403,15 @@ section {
     transform: scale(1.15) rotate(6deg);
 }
 
-
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
 
 /* Responsividad */
 @media (max-width: 900px) {
@@ -409,10 +428,79 @@ section {
     }
 }
 
+/*Tablet*/
+@media (max-width: 768px) {
 
+    header {
+        padding-top: 90px;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto {
+        padding: 1.2rem;
+    }
+
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+        gap: 1rem;
+    }
+
+    .icon {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+
+/*Móvil*/
 @media (max-width: 520px) {
 
-        #sobre-mi p {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 236, 96, 0.777);
+        display: none;             
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        display: block;
+        width: 100%;
+    }
+
+    #sobre-mi p {
         font-size: 0.95rem;
         line-height: 1.6;
     }
@@ -424,10 +512,12 @@ section {
     .cv-actions {
         flex-direction: column;
         width: 100%;
+        align-items: stretch;
+        justify-content: flex-start;
     }
 
-    .btn {
-        width: 100%;
+    .cv-actions .btn {
+        display: flex;       
         justify-content: center;
     }
 
@@ -437,7 +527,11 @@ section {
 }
 
 @media (max-width: 480px) {
-    header {
+    body {
+        font-size: 0.95rem;
+    }
+
+    #header {
         min-height: auto;
         padding-top: 100px;
         text-align: center;
@@ -446,6 +540,10 @@ section {
     .foto-perfil {
         width: 120px;
         height: 120px;
+    }
+
+    nav {
+        padding: 0.5rem;
     }
 
     nav ul {
@@ -460,7 +558,11 @@ section {
     }
 
     .filtros {
-        justify-content: center;
+        flex-direction: column;
+    }
+
+    .filtros button {
+        width: 100%;
     }
 }
 
